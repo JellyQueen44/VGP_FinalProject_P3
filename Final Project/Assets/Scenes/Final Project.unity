@@ -566,7 +566,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 105, y: -27.3}
+  m_AnchoredPosition: {x: 115.2, y: -34.9}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1141889485
@@ -652,7 +652,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -290.44147, w: -18.134289}
+  m_margin: {x: -1.591095, y: 0, z: -263.79898, w: -11.138008}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -778,6 +778,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 866f774180de4ef4291d554049dd3b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textComponent: {fileID: 1141889485}
+  lines:
+  - Test Dialogue
+  - Wow
+  textSpeed: 0.3
 --- !u!1 &1359938095
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,10 +976,10 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528917714}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1528917716
 MeshRenderer:
