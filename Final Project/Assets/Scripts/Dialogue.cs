@@ -8,7 +8,11 @@ public class Dialogue : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
+    private PlayerController playerController;
 
+    private MysteryPerson mysteryScript;
+    public GameObject mysPerson;
+    
     private int index;
 
     // Start is called before the first frame update
@@ -17,13 +21,16 @@ public class Dialogue : MonoBehaviour
         //Getting components and initiates the dialogue start
         textComponent.text = string.Empty;
         StartDialogue();
-        gameObject.SetActive(false);
+        gameObject.SetActive(true);
+
+        playerController = GameObject.Find("Capsule").GetComponent<PlayerController>();
+        mysteryScript = GameObject.Find("Sphere").GetComponent<MysteryPerson>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && playerController.mpCollider == true)
         {
 
             if(textComponent.text == lines[index])
@@ -67,6 +74,8 @@ public class Dialogue : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
+
+            playerController.mpCollider = false;
         }
     }
 }
