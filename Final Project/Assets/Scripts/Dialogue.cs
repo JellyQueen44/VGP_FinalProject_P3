@@ -14,6 +14,7 @@ public class Dialogue : MonoBehaviour
     public GameObject mysPerson;
     
     private int index;
+    private int startingLine = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -21,8 +22,7 @@ public class Dialogue : MonoBehaviour
         //Getting components and initiates the dialogue start
         textComponent.text = string.Empty;
         StartDialogue();
-        gameObject.SetActive(true);
-
+        gameObject.SetActive(false);
         playerController = GameObject.Find("Capsule").GetComponent<PlayerController>();
         mysteryScript = GameObject.Find("Sphere").GetComponent<MysteryPerson>();
     }
@@ -30,13 +30,13 @@ public class Dialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0) && playerController.mpCollider == true)
+        if(Input.GetKeyDown(KeyCode.E) && playerController.mpCollider == true)
         {
+            
 
             if(textComponent.text == lines[index])
             {
                 NextLine();
-                
             }
             else
             {
@@ -49,7 +49,7 @@ public class Dialogue : MonoBehaviour
     void StartDialogue()
     {
         //Starts the dialogue
-        index = 0;
+        index = startingLine;
         StartCoroutine(TypeLine());
     }
 
@@ -74,8 +74,10 @@ public class Dialogue : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
-
+        
             playerController.mpCollider = false;
+            mysteryScript.DisableCollider();
         }
     }
+
 }

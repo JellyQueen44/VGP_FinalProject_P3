@@ -24,6 +24,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         MovePlayer();
+
+        if(Input.GetKeyDown(KeyCode.E) && mpCollider == true)
+        {
+            dialogueBox.SetActive(true);
+        }
     }
     
     void MovePlayer()

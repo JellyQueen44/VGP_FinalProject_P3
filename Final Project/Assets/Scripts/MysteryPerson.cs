@@ -21,7 +21,7 @@ public class MysteryPerson : MonoBehaviour
         
     }
 
-    void DisableCollider()
+    public void DisableCollider()
     {
         mysteryCollider.enabled = !mysteryCollider.enabled;
 
