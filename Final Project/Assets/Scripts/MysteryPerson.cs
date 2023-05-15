@@ -23,7 +23,12 @@ public class MysteryPerson : MonoBehaviour
 
     public void DisableCollider()
     {
+        //Sometimes the best ways of solvin problems, is just to turn it off
         mysteryCollider.enabled = !mysteryCollider.enabled;
+    }
 
+    public void EnableCollider()
+    {
+       
     }
 }

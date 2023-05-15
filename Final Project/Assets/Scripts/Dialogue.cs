@@ -14,7 +14,10 @@ public class Dialogue : MonoBehaviour
     public GameObject mysPerson;
     
     private int index;
-    private int startingLine = 1;
+    public int startingLine;
+    public int endingLine;
+    
+    public bool dialogueAvailable;
 
     // Start is called before the first frame update
     void Start()
@@ -22,14 +25,23 @@ public class Dialogue : MonoBehaviour
         //Getting components and initiates the dialogue start
         textComponent.text = string.Empty;
         StartDialogue();
+        dialogueAvailable = true;
+
+        //again, just turn it off, simple solutions
         gameObject.SetActive(false);
+
+        //Getting scripts from other objects, just about the only clean looking code
         playerController = GameObject.Find("Capsule").GetComponent<PlayerController>();
         mysteryScript = GameObject.Find("Sphere").GetComponent<MysteryPerson>();
+
+        startingLine = 1;
+        endingLine = 3;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Either goes to thext line or stops everything
         if(Input.GetKeyDown(KeyCode.E) && playerController.mpCollider == true)
         {
             
@@ -46,7 +58,7 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-    void StartDialogue()
+    public void StartDialogue()
     {
         //Starts the dialogue
         index = startingLine;
@@ -65,7 +77,8 @@ public class Dialogue : MonoBehaviour
 
     void NextLine()
     {
-        if(index < lines.Length - 1)
+        // Increases the integer for the next line
+        if(index < lines.Length - endingLine)
         {
             index++;
             textComponent.text = string.Empty;
@@ -74,6 +87,7 @@ public class Dialogue : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
+            dialogueAvailable = false;
         
             playerController.mpCollider = false;
             mysteryScript.DisableCollider();
