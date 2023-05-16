@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRb;
 
     private MysteryPerson mysteryScript;
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -18,16 +19,24 @@ public class PlayerController : MonoBehaviour
         playerRb = GetComponent<Rigidbody>();
 
         mysteryScript = GameObject.Find("Sphere").GetComponent<MysteryPerson>();
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Controls Player movement
         MovePlayer();
 
+        //Player Activates the Dialogue Box (in a very scuffed way)
         if(Input.GetKeyDown(KeyCode.E) && mpCollider == true)
         {
             dialogueBox.SetActive(true);
+        }
+
+        if(Input.GetKeyDown(KeyCode.H))
+        {
+            gameManager.ExampleEvent();
         }
     }
     
@@ -44,9 +53,12 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //you are, in fact, making contact with the mystery person
         if(other.CompareTag("MysPerson"))
         {
             mpCollider = true;
         }
     }
+
+
 }

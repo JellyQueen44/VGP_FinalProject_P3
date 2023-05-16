@@ -783,11 +783,12 @@ MonoBehaviour:
   textComponent: {fileID: 1141889485}
   lines:
   - 
+  - 
   - Oh hello
   - Welcome
-  - We Have Dialogue
+  - 
   - Okay This Is Good
-  - We Have More Dialoue
+  - We Have More Dialogue
   textSpeed: 0.1
   mysPerson: {fileID: 0}
   startingLine: 1
@@ -1080,7 +1081,7 @@ GameObject:
   - component: {fileID: 1965664643}
   - component: {fileID: 1965664644}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: Game Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1113,3 +1114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12a28b8dbb9c57047b20e75966c126b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
+  mysteryScript: {fileID: 0}
+  dialogueScript: {fileID: 1198803685}

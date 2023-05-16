@@ -21,14 +21,10 @@ public class MysteryPerson : MonoBehaviour
         
     }
 
-    public void DisableCollider()
+    public void ColliderSwitch()
     {
-        //Sometimes the best ways of solvin problems, is just to turn it off
+        //Sometimes the best ways of solvin problems, is just to turn it off and on again
         mysteryCollider.enabled = !mysteryCollider.enabled;
     }
 
-    public void EnableCollider()
-    {
-       
-    }
 }

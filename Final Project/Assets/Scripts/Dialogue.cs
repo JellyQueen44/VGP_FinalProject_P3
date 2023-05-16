@@ -90,7 +90,7 @@ public class Dialogue : MonoBehaviour
             dialogueAvailable = false;
         
             playerController.mpCollider = false;
-            mysteryScript.DisableCollider();
+            mysteryScript.ColliderSwitch();
         }
     }
 
