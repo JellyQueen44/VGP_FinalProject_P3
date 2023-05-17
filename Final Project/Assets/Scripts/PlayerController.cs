@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
 
     public float speed = 5f;
     private Rigidbody playerRb;
+    private float zBound = 6.5f;
+    private float xBound = 6.969f;
 
     private MysteryPerson mysteryScript;
     private GameManager gameManager;
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour
     {
         //Controls Player movement
         MovePlayer();
+        ConstraintMove();
 
         //Player Activates the Dialogue Box (in a very scuffed way)
         if(Input.GetKeyDown(KeyCode.E) && mpCollider == true)
@@ -47,8 +50,29 @@ public class PlayerController : MonoBehaviour
 
         transform.Translate(Vector3.forward * speed * verticalInput * Time.deltaTime);
         transform.Translate(Vector3.right * speed * horizontalInput * Time.deltaTime);
-
         
+    }
+
+    void ConstraintMove()
+    {
+        if (transform.position.z < -zBound)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, -zBound);
+        }
+            if (transform.position.z > zBound)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, zBound);
+        }
+
+        if (transform.position.x < -xBound)
+        {
+            transform.position = new Vector3(-xBound, transform.position.y, transform.position.z);
+        }
+            if (transform.position.x > xBound)
+        {
+            transform.position = new Vector3(xBound, transform.position.y, transform.position.z);
+        }
+
     }
 
     private void OnTriggerEnter(Collider other)

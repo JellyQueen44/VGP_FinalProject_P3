@@ -35,7 +35,7 @@ public class Dialogue : MonoBehaviour
         mysteryScript = GameObject.Find("Sphere").GetComponent<MysteryPerson>();
 
         startingLine = 1;
-        endingLine = 3;
+        endingLine = 4;
     }
 
     // Update is called once per frame

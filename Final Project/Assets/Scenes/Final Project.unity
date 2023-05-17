@@ -789,6 +789,7 @@ MonoBehaviour:
   - 
   - Okay This Is Good
   - We Have More Dialogue
+  - 
   textSpeed: 0.1
   mysPerson: {fileID: 0}
   startingLine: 1
