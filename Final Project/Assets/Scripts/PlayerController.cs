@@ -84,5 +84,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("BBall"))
+        {
+            Rigidbody ballRb = collision.gameObject.GetComponent<Rigidbody>();
+            Vector3 pushAway = collision.gameObject.transform.position - transform.position;
+
+            ballRb.AddForce(pushAway * 10, ForceMode.Impulse);
+
+        }
+
+    }
 
 }
