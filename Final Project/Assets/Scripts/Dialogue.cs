@@ -11,13 +11,16 @@ public class Dialogue : MonoBehaviour
     private PlayerController playerController;
 
     private MysteryPerson mysteryScript;
+    private GameManager gameManagerScript;
     public GameObject mysPerson;
+    public GameObject bouncyBall;
     
     private int index;
     public int startingLine;
     public int endingLine;
     
     public bool dialogueAvailable;
+    public bool canSpawnBall;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +36,7 @@ public class Dialogue : MonoBehaviour
         //Getting scripts from other objects, just about the only clean looking code
         playerController = GameObject.Find("Capsule").GetComponent<PlayerController>();
         mysteryScript = GameObject.Find("Sphere").GetComponent<MysteryPerson>();
+        gameManagerScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
 
         startingLine = 1;
         endingLine = 4;
@@ -89,8 +93,14 @@ public class Dialogue : MonoBehaviour
             gameObject.SetActive(false);
             dialogueAvailable = false;
         
+        
             playerController.mpCollider = false;
             mysteryScript.ColliderSwitch();
+        }
+
+        if(index > lines.Length - 4)
+        {
+            gameManagerScript.SpawnBouncyBall();
         }
     }
 

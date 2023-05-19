@@ -18,7 +18,7 @@ public class Sensor : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(CompareTag("BBall"))
+        if(other.gameObject.CompareTag("BBall"))
         {
             Destroy(other.gameObject);
         }

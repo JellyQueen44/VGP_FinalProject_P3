@@ -3,7 +3,10 @@ guid: 866f774180de4ef4291d554049dd3b1a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - textComponent: {instanceID: 0}
+  - mysPerson: {instanceID: 0}
+  - bouncyBall: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

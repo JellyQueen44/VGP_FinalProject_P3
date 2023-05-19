@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
     public PlayerController playerController;
     public MysteryPerson mysteryScript;
     public Dialogue dialogueScript;
+    public float spawnRange = 9.0f;
+
+    public GameObject bouncyBall;
 
     // Start is called before the first frame update
     void Start()
@@ -34,4 +37,20 @@ public class GameManager : MonoBehaviour
             mysteryScript.ColliderSwitch();
         }
     }
+
+    public void SpawnBouncyBall()
+    {
+        Instantiate(bouncyBall, GenerateSpawnPosition(), bouncyBall.transform.rotation);
+    }
+
+    public Vector3 GenerateSpawnPosition()
+    {
+        float spawnPosZ = Random.Range(-spawnRange, spawnRange);
+        float spawnPosX = Random.Range(-spawnRange, spawnRange);
+
+        Vector3 randomPos = new Vector3(spawnPosX, 0, spawnPosZ);
+
+        return randomPos;
+    }
+
 }
