@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public PlayerController playerController;
     public MysteryPerson mysteryScript;
     public Dialogue dialogueScript;
-    public float spawnRange = 9.0f;
+    public float spawnRange = 5.0f;
 
     public GameObject bouncyBall;
 
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
         float spawnPosZ = Random.Range(-spawnRange, spawnRange);
         float spawnPosX = Random.Range(-spawnRange, spawnRange);
 
-        Vector3 randomPos = new Vector3(spawnPosX, 0, spawnPosZ);
+        Vector3 randomPos = new Vector3(spawnPosX, 1, spawnPosZ);
 
         return randomPos;
     }

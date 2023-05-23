@@ -20,7 +20,6 @@ public class Dialogue : MonoBehaviour
     public int endingLine;
     
     public bool dialogueAvailable;
-    public bool canSpawnBall;
 
     // Start is called before the first frame update
     void Start()
@@ -98,7 +97,7 @@ public class Dialogue : MonoBehaviour
             mysteryScript.ColliderSwitch();
         }
 
-        if(index > lines.Length - 4)
+        if(index == 3)
         {
             gameManagerScript.SpawnBouncyBall();
         }

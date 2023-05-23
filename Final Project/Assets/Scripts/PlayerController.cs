@@ -9,17 +9,19 @@ public class PlayerController : MonoBehaviour
 
     public float speed = 5f;
     private Rigidbody playerRb;
-    private float zBound = 6.5f;
+    private float zBound = 6.969f;
     private float xBound = 6.969f;
 
     private MysteryPerson mysteryScript;
     private GameManager gameManager;
+    private Sensor sensorScript;
 
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
 
+        sensorScript = GameObject.Find("Sensor").GetComponent<Sensor>();
         mysteryScript = GameObject.Find("Sphere").GetComponent<MysteryPerson>();
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
@@ -37,10 +39,12 @@ public class PlayerController : MonoBehaviour
             dialogueBox.SetActive(true);
         }
 
-        if(Input.GetKeyDown(KeyCode.H))
+        if(Input.GetKeyDown(KeyCode.B) && sensorScript.canSpawnBall)
         {
-            gameManager.ExampleEvent();
+            gameManager.SpawnBouncyBall();
         }
+
+
     }
     
     void MovePlayer()
