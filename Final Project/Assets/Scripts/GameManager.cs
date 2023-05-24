@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public Dialogue dialogueScript;
     public float spawnRange = 5.0f;
 
-    public GameObject bouncyBall;
+    public GameObject[] bouncyBall;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +40,9 @@ public class GameManager : MonoBehaviour
 
     public void SpawnBouncyBall()
     {
-        Instantiate(bouncyBall, GenerateSpawnPosition(), bouncyBall.transform.rotation);
+        int bouncyIndex = Random.Range(0, bouncyBall.Length);
+
+        Instantiate(bouncyBall[bouncyIndex], GenerateSpawnPosition(), bouncyBall[bouncyIndex].transform.rotation);
     }
 
     public Vector3 GenerateSpawnPosition()
