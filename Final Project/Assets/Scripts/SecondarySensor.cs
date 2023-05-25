@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sensor : MonoBehaviour
+public class SecondarySensor : MonoBehaviour
 {
     public GameManager gameManagerSensor;
 
@@ -24,11 +24,8 @@ public class Sensor : MonoBehaviour
         if(other.gameObject.CompareTag("BBall"))
         {
             Destroy(other.gameObject);
-            
             canSpawnBall = true;
-            gameManagerSensor.ExampleEvent();
-
-            Destroy(gameObject);
+            
         }
     }
 }

@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
         {
             dialogueScript.dialogueAvailable = true;
 
-            dialogueScript.startingLine = 4;
+            dialogueScript.startingLine = 11;
             dialogueScript.endingLine = 1;
 
             dialogueScript.StartDialogue();

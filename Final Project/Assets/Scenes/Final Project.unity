@@ -314,8 +314,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540740484}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -7.73, y: 2.42, z: 0.04}
-  m_LocalScale: {x: 16, y: 5, z: 0.5}
+  m_LocalPosition: {x: -7.77, y: 2.42, z: -0}
+  m_LocalScale: {x: 15.84, y: 5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -475,6 +475,96 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &954064096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 954064099}
+  - component: {fileID: 954064098}
+  - component: {fileID: 954064097}
+  - component: {fileID: 954064101}
+  - component: {fileID: 954064100}
+  m_Layer: 0
+  m_Name: Sensor 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &954064097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954064096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1ef71de134cea4c9f1c8293ec2610d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManagerSensor: {fileID: 0}
+  canSpawnBall: 0
+--- !u!65 &954064098
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954064096}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &954064099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954064096}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -5.57, z: 0}
+  m_LocalScale: {x: 100, y: 1, z: 100}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &954064100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954064096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deb0bce2acf0d0f4eb66f3d03d0a8a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManagerSensor: {fileID: 0}
+  canSpawnBall: 0
+--- !u!114 &954064101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954064096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deb0bce2acf0d0f4eb66f3d03d0a8a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManagerSensor: {fileID: 0}
+  canSpawnBall: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,8 +870,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059842948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.42, z: -7.7}
-  m_LocalScale: {x: 15, y: 5, z: 0.5}
+  m_LocalPosition: {x: 0, y: 2.42, z: -7.67}
+  m_LocalScale: {x: 16, y: 5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1038,8 +1128,14 @@ MonoBehaviour:
   lines:
   - 
   - 
-  - Oh hello
-  - Welcome
+  - Oh hello, didn't realize you were there
+  - Welcome to the Ballpit, it's not the most comfortable space I know
+  - 'Who am I? '
+  - Not sure, I've been in the Ballpit for so long things like that are easy to forget
+  - Call me whatever you'd like I guess
+  - Oh! Right, the namesake of the Ballpit!
+  - Here, have a ball, play around with it till your hearts' content
+  - I'm sure it'll entertain you plenty
   - 
   - Okay This Is Good
   - We Have More Dialogue
@@ -1468,8 +1564,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984385071}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.42, z: 7.67}
-  m_LocalScale: {x: 15, y: 5, z: 0.5}
+  m_LocalPosition: {x: 0, y: 2.42, z: 7.74}
+  m_LocalScale: {x: 16, y: 5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1565,8 +1661,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109508697}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 7.74, y: 2.42, z: 0.04}
-  m_LocalScale: {x: 16, y: 5, z: 0.5}
+  m_LocalPosition: {x: 7.76, y: 2.42, z: 0.04}
+  m_LocalScale: {x: 15.92, y: 5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

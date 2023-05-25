@@ -97,7 +97,7 @@ public class Dialogue : MonoBehaviour
             mysteryScript.ColliderSwitch();
         }
 
-        if(index == 3)
+        if(index == 9)
         {
             gameManagerScript.SpawnBouncyBall();
         }
