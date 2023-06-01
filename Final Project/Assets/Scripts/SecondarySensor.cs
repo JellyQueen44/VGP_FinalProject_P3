@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class SecondarySensor : MonoBehaviour
 {
-    public GameManager gameManagerSensor;
+    public float ballCollisions;
 
-    public bool canSpawnBall = false;
+    public GameManager gameManagerSSensor;
+
     // Start is called before the first frame update
     void Start()
     {
-        gameManagerSensor = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        gameManagerSSensor = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -21,11 +22,17 @@ public class SecondarySensor : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("BBall"))
+        if(other.gameObject.CompareTag("BBall") && ballCollisions != 50)
         {
             Destroy(other.gameObject);
-            canSpawnBall = true;
+            ballCollisions += 1;
             
+        }else
+        {
+            Destroy(other.gameObject);
+            ballCollisions += 1;
+
+            gameManagerSSensor.ExampleEventTwo();
         }
     }
 }

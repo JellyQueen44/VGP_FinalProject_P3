@@ -31,6 +31,20 @@ public class GameManager : MonoBehaviour
             dialogueScript.dialogueAvailable = true;
 
             dialogueScript.startingLine = 11;
+            dialogueScript.endingLine = 4;
+
+            dialogueScript.StartDialogue();
+            mysteryScript.ColliderSwitch();
+        }
+    }
+
+    public void ExampleEventTwo()
+    {
+        if (!dialogueScript.dialogueAvailable)
+        {
+            dialogueScript.dialogueAvailable = true;
+
+            dialogueScript.startingLine = 14;
             dialogueScript.endingLine = 1;
 
             dialogueScript.StartDialogue();

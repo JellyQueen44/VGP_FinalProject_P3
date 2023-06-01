@@ -485,8 +485,6 @@ GameObject:
   m_Component:
   - component: {fileID: 954064099}
   - component: {fileID: 954064098}
-  - component: {fileID: 954064097}
-  - component: {fileID: 954064101}
   - component: {fileID: 954064100}
   m_Layer: 0
   m_Name: Sensor 2
@@ -495,20 +493,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &954064097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 954064096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc1ef71de134cea4c9f1c8293ec2610d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManagerSensor: {fileID: 0}
-  canSpawnBall: 0
 --- !u!65 &954064098
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -549,22 +533,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb0bce2acf0d0f4eb66f3d03d0a8a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManagerSensor: {fileID: 0}
-  canSpawnBall: 0
---- !u!114 &954064101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 954064096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: deb0bce2acf0d0f4eb66f3d03d0a8a22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManagerSensor: {fileID: 0}
-  canSpawnBall: 0
+  ballCollisions: 0
+  gameManagerSSensor: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,8 +1107,13 @@ MonoBehaviour:
   - Here, have a ball, play around with it till your hearts' content
   - I'm sure it'll entertain you plenty
   - 
-  - Okay This Is Good
-  - We Have More Dialogue
+  - Oh, you threw the ball over the wall
+  - That's alright, you can always just create more yourself with the press of a
+    (B) button.
+  - 
+  - Over 50 thrown out of the Ballpit, now that's a record
+  - Give yourself some applause, not very many people get records in a place with
+    only two people
   - 
   textSpeed: 0.1
   mysPerson: {fileID: 0}

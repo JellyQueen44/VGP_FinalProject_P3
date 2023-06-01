@@ -38,7 +38,7 @@ public class Dialogue : MonoBehaviour
         gameManagerScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
 
         startingLine = 1;
-        endingLine = 4;
+        endingLine = 7;
     }
 
     // Update is called once per frame
