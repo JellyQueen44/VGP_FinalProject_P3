@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
 
     }
     
+    // Does what it says on the tin, player movement based on input
     void MovePlayer()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -57,6 +58,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    // Prevents you from moving to places you likely aren't supposed to be (In case the walls fail)
     void ConstraintMove()
     {
         if (transform.position.z < -zBound)

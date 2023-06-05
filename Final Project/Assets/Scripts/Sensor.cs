@@ -13,12 +13,7 @@ public class Sensor : MonoBehaviour
         gameManagerSensor = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // Triggers initial event when a ball collides
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("BBall"))

@@ -15,12 +15,6 @@ public class MysteryPerson : MonoBehaviour
         playerController = GameObject.Find("Capsule").GetComponent<PlayerController>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ColliderSwitch()
     {
         //Sometimes the best ways of solvin problems, is just to turn it off and on again

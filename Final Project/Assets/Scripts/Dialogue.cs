@@ -44,7 +44,7 @@ public class Dialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Either goes to thext line or stops everything
+        //Either goes to the next line or stops everything
         if(Input.GetKeyDown(KeyCode.E) && playerController.mpCollider == true)
         {
             
@@ -91,12 +91,13 @@ public class Dialogue : MonoBehaviour
         {
             gameObject.SetActive(false);
             dialogueAvailable = false;
-        
+            gameManagerScript.indicator.SetActive(false);
         
             playerController.mpCollider = false;
             mysteryScript.ColliderSwitch();
         }
 
+        // Spawns a bouncy ball upon reaching a certain line
         if(index == 9)
         {
             gameManagerScript.SpawnBouncyBall();

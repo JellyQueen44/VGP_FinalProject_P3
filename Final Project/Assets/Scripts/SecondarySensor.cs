@@ -14,14 +14,10 @@ public class SecondarySensor : MonoBehaviour
         gameManagerSSensor = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     private void OnTriggerEnter(Collider other)
     {
+        // keeps track of balls collided with
         if(other.gameObject.CompareTag("BBall") && ballCollisions != 50)
         {
             Destroy(other.gameObject);
@@ -29,6 +25,7 @@ public class SecondarySensor : MonoBehaviour
             
         }else
         {
+            // upon reaching 50 balls, makes example event available
             Destroy(other.gameObject);
             ballCollisions += 1;
 
